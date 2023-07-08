@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../const/colors.dart';
-import 'myfile.dart';
+import '../../model/my_file.dart';
+
 
 class FileInfoCard extends StatelessWidget {
   const FileInfoCard({

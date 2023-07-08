@@ -2,9 +2,10 @@
 import 'package:flutter/material.dart';
 
 import '../../const/colors.dart';
+import '../../model/my_file.dart';
 import '../../responsive.dart';
 import 'file_info_card.dart';
-import 'myfile.dart';
+
 
 class MyFiles extends StatelessWidget {
   const MyFiles({
