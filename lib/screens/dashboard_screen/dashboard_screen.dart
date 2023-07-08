@@ -10,12 +10,14 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: SingleChildScrollView(
-          primary: false,
-          padding: EdgeInsets.all(defaultPadding),
+      primary: false,
+      padding: EdgeInsets.all(defaultPadding),
       child: Column(
         children: [
           Header(),
-SizedBox(height: defaultPadding,),
+          SizedBox(
+            height: defaultPadding,
+          ),
           Row(
             children: [
 
