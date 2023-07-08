@@ -19,11 +19,11 @@ class MainScreen extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Responsive.isDesktop(context)
-              ? const Expanded(
+         if(Responsive.isDesktop(context))
+              const Expanded(
 
-              child: SideMenu())
-              : const Expanded(
+              child: SideMenu()),
+               const Expanded(
               flex: 5,
               child: DashBoardScreen())
         ],
