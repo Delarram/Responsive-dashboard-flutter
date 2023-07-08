@@ -103,7 +103,7 @@ packages:
     source: hosted
     version: "2.0.2"
   flutter_svg:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_svg
       sha256: "8c5d68a82add3ca76d792f058b186a0599414f279f00ece4830b9b231b570338"
@@ -116,7 +116,7 @@ packages:
     source: sdk
     version: "0.0.0"
   google_fonts:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: google_fonts
       sha256: "2776c66b3e97c6cdd58d1bd3281548b074b64f1fd5c8f82391f7456e38849567"
@@ -284,7 +284,7 @@ packages:
     source: hosted
     version: "4.2.4"
   provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: provider
       sha256: cdbe7530b12ecd9eb455bdaa2fcb8d4dad22e80b8afb4798b41479d5ce26847f
