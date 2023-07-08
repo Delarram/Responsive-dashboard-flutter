@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:responsive_dashboard_flutter/responsive.dart';
 
 import '../controller/menuapp_controller.dart';
+import 'dashboard_screen/dashboard_screen.dart';
 import 'drawer_session/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
@@ -14,10 +16,13 @@ class MainScreen extends StatelessWidget {
       key: menuAppController.scaffoldKey,
       drawer: const SideMenu(),
       body: SafeArea(
-          child: Container(
-            color: Colors.blue,
-          )
-      ),
+          child: Row(
+        children: [
+          Responsive.isDesktop(context)
+              ? const Expanded(child: SideMenu())
+              : const Expanded(child: DashBoardScreen())
+        ],
+      )),
     );
   }
 }
