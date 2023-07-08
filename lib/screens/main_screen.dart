@@ -17,7 +17,7 @@ class MainScreen extends StatelessWidget {
       drawer: const SideMenu(),
       body: SafeArea(
           child: Row(
-
+            crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Responsive.isDesktop(context)
               ? const Expanded(
