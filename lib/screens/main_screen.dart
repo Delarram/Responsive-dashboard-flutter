@@ -17,10 +17,15 @@ class MainScreen extends StatelessWidget {
       drawer: const SideMenu(),
       body: SafeArea(
           child: Row(
+
         children: [
           Responsive.isDesktop(context)
-              ? const Expanded(child: SideMenu())
-              : const Expanded(child: DashBoardScreen())
+              ? const Expanded(
+
+              child: SideMenu())
+              : const Expanded(
+              flex: 5,
+              child: DashBoardScreen())
         ],
       )),
     );
