@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_dashboard_flutter/screens/main_screen.dart';
+import 'package:responsive_dashboard_flutter/screens/splashscreen/splashscreen.dart';
 
 import 'const/colors.dart';
 import 'controller/menuapp_controller.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
             create: (context) => MenuAppController(),
           ),
         ],
-        child:MainScreen(),
+        child:SplashScreen(),
       ),
     );
   }

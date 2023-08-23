@@ -21,7 +21,6 @@ class MainScreen extends StatelessWidget {
         children: [
          if(Responsive.isDesktop(context))
               const Expanded(
-
               child: SideMenu()),
                const Expanded(
               flex: 5,
