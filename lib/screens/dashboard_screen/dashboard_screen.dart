@@ -30,17 +30,17 @@ class DashBoardScreen extends StatelessWidget {
                 flex: 5,
                 child: Column(
                   children: [
-                    MyFiles(),
-                    SizedBox(height: defaultPadding),
-                    RecentFile(),
+                    const MyFiles(),
+                    const SizedBox(height: defaultPadding),
+                    const RecentFile(),
                     if (Responsive.isMobile(context))
-                      SizedBox(height: defaultPadding),
-                    if (Responsive.isMobile(context)) StorageDetails(),
+                     const SizedBox(height: defaultPadding),
+                    if (Responsive.isMobile(context)) const StorageDetails(),
                   ],
                 ),
               ),
               if (!Responsive.isMobile(context))
-                SizedBox(width: defaultPadding),
+              const  SizedBox(width: defaultPadding),
               // On Mobile means if the screen is less than 850 we don't want to show it
               if (!Responsive.isMobile(context))
                 Expanded(
