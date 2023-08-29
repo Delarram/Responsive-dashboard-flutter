@@ -10,9 +10,14 @@ class ReviewBloc extends ChangeNotifier{
     notifyListeners();
   }
 
-
-  void updateReview(int index, Review updateReview){
-    reviews[index] = updateReview;
-    notifyListeners();
+  void editReview(String id,String newText, int newRating){
+    final reviewIndex = reviews.indexWhere((review) => review.id == id);
+    if(reviewIndex != -1){
+      reviews[reviewIndex].title = newText;
+      reviews[reviewIndex].rating = newRating;
+      notifyListeners();
+    }
   }
+
+
 }

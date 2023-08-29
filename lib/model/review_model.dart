@@ -1,7 +1,7 @@
 class Review{
-  final String title;
-  final String description;
-  final String ratinng;
+   String title;
+  final String id;
+   int rating;
 
-  Review({required this.description,required this.title, required this.ratinng});
+  Review({required this.id,required this.title, required this.rating});
 }
