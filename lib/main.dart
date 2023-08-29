@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_dashboard_flutter/bloc/review_bloc.dart';
+import 'package:responsive_dashboard_flutter/model/review_model.dart';
 import 'package:responsive_dashboard_flutter/screens/main_screen.dart';
 import 'package:responsive_dashboard_flutter/screens/review_page/review_page.dart';
 import 'package:responsive_dashboard_flutter/screens/splashscreen/splashscreen.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
           ),
           ChangeNotifierProvider(create: (context)=>ReviewBloc())
         ],
-        child:GiveReviewPage(),
+        child:ReviewPage(),
       ),
     );
   }
