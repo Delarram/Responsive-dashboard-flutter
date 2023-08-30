@@ -29,6 +29,7 @@ class _ReviewFormState extends State<ReviewForm> {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = Provider.of<ReviewBloc>(context, listen: false);
     return Column(
       children: [
         TextField(
@@ -48,23 +49,26 @@ class _ReviewFormState extends State<ReviewForm> {
             final rating = int.tryParse(_ratingController.text) ?? 0;
 
             if (_isEditing) {
-              final reviewProvider = Provider.of<ReviewBloc>(context, listen: false);
-              reviewProvider.editReview(widget.initialReview!.id, text, rating);
+              bloc.editReview(widget.initialReview!.id, text, rating);
             } else {
               final review = Review(
                 id: DateTime.now().toString(),
                 title: text,
                 rating: rating,
               );
-              final reviewProvider = Provider.of<ReviewBloc>(context, listen: false);
-              reviewProvider.addReview(review);
+              bloc.addReview(review);
             }
-
             Navigator.pop(context);
           },
           child: Text(_isEditing ? 'Save Changes' : 'Add Review'),
         ),
       ],
     );
+  }
+  @override
+  void dispose() {
+    _textController.dispose();
+    _ratingController.dispose();
+    super.dispose();
   }
 }
