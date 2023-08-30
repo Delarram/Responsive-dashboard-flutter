@@ -38,6 +38,13 @@ class OperationListView extends StatelessWidget {
                     ))),
           ),
           const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(onPressed: (){}, child: Text("Save")),
+              ElevatedButton(onPressed: (){}, child: Text("update"))
+            ],
+          )
         ],
       ),
     );
