@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_dashboard_flutter/bloc/review_bloc.dart';
 import 'package:responsive_dashboard_flutter/screens/review_page/review_page.dart';
+import 'package:responsive_dashboard_flutter/screens/splashscreen/splashscreen.dart';
 import 'const/colors.dart';
 import 'controller/menuapp_controller.dart';
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           ),
           ChangeNotifierProvider(create: (context)=>ReviewBloc())
         ],
-        child:ReviewPage(),
+        child:SplashScreen(),
       ),
     );
   }
