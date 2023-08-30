@@ -6,6 +6,7 @@ import '../model/contact_model.dart';
 class OperationBloc extends ChangeNotifier{
 List<Contact> contacts = [];
 
+ int index = -1;
 void addContact(Contact contact){
   contacts.add(contact);
   notifyListeners();
